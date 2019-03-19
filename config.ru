@@ -1,5 +1,4 @@
 require File.expand_path('../config/environment', __FILE__)
-use ActiveRecord::ConnectionAdapters::ConnectionManagement
 use Rack::ConditionalGet
 use Rack::ETag
 

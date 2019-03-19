@@ -1,11 +1,9 @@
-version: '2'
+version: '3'
 services:
   db:
-    image: "mysql:5.7"
-    expose:
-      - 3306
-    environment:
-      MYSQL_ROOT_PASSWORD: root
+    image: 'postgres:9.6.3'
+    ports:
+      - '5432:5432'
 
   web:
     build: .
@@ -14,8 +12,8 @@ services:
     volumes:
       - .:/usr/src/app
     environment:
-      DB_USER: root
-      DB_PASSWORD: root
+      DB_USER: postgres
+      DB_PASSWORD: postgres
       DB_HOST: db
     links:
       - db

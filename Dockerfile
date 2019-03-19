@@ -1,4 +1,4 @@
-FROM ruby:2.3.4
+FROM ruby:2.6.2
 
 # Installing application dependencies
 RUN apt-get update
