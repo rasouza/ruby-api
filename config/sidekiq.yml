@@ -1,0 +1,3 @@
+timestamp_job:
+  cron: "* * * * *"
+  class: "TimestampWorker"

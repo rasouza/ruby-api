@@ -7,6 +7,7 @@ require 'erb'
 
 Bundler.require :default, ENV['RACK_ENV']
 
+require_rel 'initializers'
 require_rel '../app'
 require_rel '../api'
 require_rel '../lib'
