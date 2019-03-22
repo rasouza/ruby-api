@@ -4,11 +4,11 @@ FROM ruby:2.6.2
 RUN apt-get update
 RUN apt-get install nodejs -y
 
-ENV APP_HOME /usr/src/app
+ENV APP_HOME /usr/src/app/
 RUN mkdir $APP_HOME
-ADD . $APP_HOME
-
 WORKDIR $APP_HOME
-RUN bundle install
-RUN bin/setup
 
+COPY Gemfile* $APP_HOME
+RUN bundle install
+
+COPY . $APP_HOME
