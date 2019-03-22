@@ -2,10 +2,8 @@ require File.expand_path('../config/environment', __FILE__)
 use Rack::ConditionalGet
 use Rack::ETag
 
-use Rack::Static,
-  root: File.expand_path('../swagger-ui', __FILE__),
-  urls: ["/css","/fonts","/images","/lang","/lib"],
-  index: 'index.html'
+require 'sidekiq/web'
+require 'sidekiq/cron/web'
 
-run API::Base
+run Rack::URLMap.new('/' => API::Base, '/sidekiq' => Sidekiq::Web)
 
