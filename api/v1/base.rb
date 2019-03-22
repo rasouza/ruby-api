@@ -13,11 +13,6 @@ module APIv1
 
     mount APIv1::Products
 
-    add_swagger_documentation api_version: 'v1',
-      info: {
-        title: 'Grape Bootstrap V1 API',
-        description: 'Documentation for version 1 API'
-      }
   end
 end
 
