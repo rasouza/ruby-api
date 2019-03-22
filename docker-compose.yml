@@ -4,18 +4,18 @@ services:
     image: 'postgres:9.6.3'
     ports:
       - '5432:5432'
-
+  redis:
+    image: redis:5
+    ports:
+      - '6379:6379'
   web:
     build: .
     ports:
-      - "3000:3000"
+      - '3000:3000'
     volumes:
-      - .:/usr/src/app
+      - '.:/usr/src/app'
     environment:
       DB_USER: postgres
       DB_PASSWORD: postgres
       DB_HOST: db
-    links:
-      - db
     command: bundle exec rackup -p 3000 --host 0.0.0.0
-
