@@ -1,13 +1,15 @@
 class TimestampWorker
   include Sidekiq::Worker
 
-  def perform
-    File.open('teste.txt', 'a') do |file|
+  JOB_NAME = 'timestamp_job'
+
+  def perform(filename)
+    File.open(filename, 'a') do |file|
       file.puts Time.now
     end
-    Sidekiq::Cron::Job.find('timestamp_job').enable!
+    Sidekiq::Cron::Job.find(JOB_NAME).enable!
   rescue => e
-    Sidekiq::Cron::Job.find('timestamp_job').disable!
+    Sidekiq::Cron::Job.find(JOB_NAME).disable!
     raise e
   end
 end

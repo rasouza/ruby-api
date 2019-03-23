@@ -10,6 +10,7 @@ gem 'activerecord', require: 'active_record'
 gem 'require_all', '~> 1.3', '>= 1.3.3'
 gem 'sidekiq', '~> 5.2', '>= 5.2.5'
 gem 'sidekiq-cron', '~> 1.1'
+gem 'faraday', '~> 0.15.4'
 
 group :development, :test do
   gem 'pry-byebug'

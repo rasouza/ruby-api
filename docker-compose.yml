@@ -8,6 +8,13 @@ services:
     image: redis:5
     ports:
       - '6379:6379'
+  server:
+    image: clue/json-server
+    ports:
+      - '5000:80'
+    volumes:
+      - './server.json:/data/db.json'
+
   web:
     build: .
     ports:
