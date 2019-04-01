@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: https://maven.internal.sumup.com/content/repositories/gems/
   specs:
     activemodel (5.2.2.1)
       activesupport (= 5.2.2.1)

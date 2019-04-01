@@ -1,4 +1,5 @@
-source 'https://rubygems.org'
+source 'https://maven.internal.sumup.com/content/repositories/gems/'
+
 ruby '2.6.2'
 
 gem 'rack'
