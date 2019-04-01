@@ -19,6 +19,9 @@ end
 group :development do
   gem 'rake'
   gem 'thin'
+  gem 'guard', require: false
+  gem 'guard-rack', require: false
+  gem 'guard-bundler', require: false
 end
 
 group :test do
