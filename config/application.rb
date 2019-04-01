@@ -16,3 +16,5 @@ db_config = YAML.load(ERB.new(File.read("config/database.yml")).result)[ENV['RAC
 ActiveRecord::Base.default_timezone = :utc
 ActiveRecord::Base.establish_connection(db_config)
 
+SemanticLogger.default_level = :trace
+SemanticLogger.add_appender(io: $stdout, formatter: :color)
