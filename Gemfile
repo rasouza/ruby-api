@@ -1,5 +1,5 @@
-# source 'https://maven.internal.sumup.com/content/repositories/gems/'
-source 'https://rubygems.org'
+source 'https://maven.internal.sumup.com/content/repositories/gems/'
+# source 'https://rubygems.org'
 
 
 ruby '2.6.2'
@@ -11,6 +11,7 @@ gem 'pg'
 gem 'semantic_logger', '~> 4.5'
 gem 'sneakers', '~> 2.11'
 gem 'sneakers_handlers'
+gem 'meta_config', '~> 1.6.1'
 gem 'activerecord', require: 'active_record'
 gem 'require_all', '~> 1.3', '>= 1.3.3'
 gem 'sidekiq', '~> 5.2', '>= 5.2.5'

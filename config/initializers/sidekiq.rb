@@ -1,5 +1,7 @@
+redis_config = $meta_config.parse('redis.yml')
+redis_conn = "redis://#{redis_config['host']}:#{redis_config['port']}"
 Sidekiq.configure_server do |config|
-  # config.redis = { url: 'redis://redis:6379' }
+  config.redis = { url: redis_conn }
 
   config.error_handlers << Proc.new do |exception,context|
     job_context = context[:job].with_indifferent_access
@@ -11,11 +13,11 @@ Sidekiq.configure_server do |config|
     chain.add Recover
   end
 
-  if File.exist?('config/sidekiq.yml') && Sidekiq.server?
-    Sidekiq::Cron::Job.load_from_hash YAML.load_file('config/sidekiq.yml')
+  if File.exist?('config/cronjobs.yml') && Sidekiq.server?
+    Sidekiq::Cron::Job.load_from_hash YAML.load_file('config/cronjobs.yml')
   end
 end
 
 Sidekiq.configure_client do |config|
-  # config.redis = { url: 'redis://redis:6379' }
+  config.redis = { url: redis_conn }
 end
