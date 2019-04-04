@@ -1,11 +1,11 @@
 timestamp_job:
   cron: "* * * * *"
-  class: "Worker::Timestamp"
+  class: "Cron::Timestamp"
   args:
     - "teste.txt"
 
 api_job:
   cron: "* * * * *"
-  class: "Worker::Api"
+  class: "Cron::Api"
   args:
     - "http://localhost:5000"

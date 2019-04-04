@@ -11,12 +11,10 @@ module Worker
                 }
 
     def work(msg)
-      1/0
       payload = JSON.parse(msg)
 
       p payload
       worker_trace "FOUND <#{payload}>"
-      reject!
     end
   end
 end

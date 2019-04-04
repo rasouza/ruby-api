@@ -1,4 +1,4 @@
-module Worker
+module Cron
   class Timestamp
     include Sidekiq::Worker
 

@@ -20,6 +20,10 @@ module APIv1
       end
     end
 
+    get '/hello' do
+      Resource::Conversion.new.hello
+    end
+
     resource :products do
       desc 'Returns product list'
       get do

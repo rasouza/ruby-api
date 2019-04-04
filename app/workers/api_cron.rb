@@ -1,4 +1,4 @@
-module Worker
+module Cron
   class Api
     include Sidekiq::Worker
     JOB_NAME = 'api_job'
