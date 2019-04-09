@@ -1,3 +1,6 @@
+require 'sidekiq/web'
+require 'sidekiq/cron/web'
+
 redis_config = $meta_config.parse('redis.yml')
 redis_conn = "redis://#{redis_config['host']}:#{redis_config['port']}"
 Sidekiq.configure_server do |config|

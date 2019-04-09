@@ -27,10 +27,8 @@
 load "tasks/otr-activerecord.rake"
 
 namespace :db do
-  # Some db tasks require your app code to be loaded; they'll expect to find it here
   task :environment do
-   ENV['RACK_ENV'] ||= 'development'
-   require File.expand_path('../config/environment', __FILE__)
+    require_relative 'config/environment'
  end
 end
 
