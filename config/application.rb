@@ -15,5 +15,3 @@ require_rel '../app'
 require_rel '../api'
 require_rel '../lib'
 require_rel 'initializers'
-
-

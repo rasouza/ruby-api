@@ -1,3 +1,3 @@
 db_config = $meta_config.parse('database.yml')
 ActiveRecord::Base.default_timezone = :utc
-ActiveRecord::Base.establish_connection(db_config)
+OTR::ActiveRecord.configure_from_hash!(db_config)

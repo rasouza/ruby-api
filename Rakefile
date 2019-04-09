@@ -1,5 +1,6 @@
  require 'rubygems'
  require 'bundler'
+ require "bundler/setup"
 
  begin
    Bundler.setup(:default, :development)
@@ -22,6 +23,17 @@
      puts "     #{method} #{path}"
    end
  end
+
+load "tasks/otr-activerecord.rake"
+
+namespace :db do
+  # Some db tasks require your app code to be loaded; they'll expect to find it here
+  task :environment do
+   ENV['RACK_ENV'] ||= 'development'
+   require File.expand_path('../config/environment', __FILE__)
+ end
+end
+
 
  #Load tasks
  Dir.glob('lib/tasks/*.rake').each { |task| load task }

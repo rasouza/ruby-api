@@ -75,6 +75,9 @@ GEM
       ffi
       guard (~> 2.3)
       spoon
+    hashie (3.6.0)
+    hashie-forbidden_attributes (0.1.1)
+      hashie (>= 3.0)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
@@ -97,6 +100,9 @@ GEM
     notiffany (0.1.1)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    otr-activerecord (1.3.0)
+      activerecord (>= 4.0, < 6.1)
+      hashie-forbidden_attributes (~> 0.1)
     pg (1.1.4)
     pry (0.12.2)
       coderay (~> 1.1.0)
@@ -194,6 +200,7 @@ DEPENDENCIES
   guard-bundler
   guard-rack
   meta_config (~> 1.6.1)
+  otr-activerecord (~> 1.3.0)
   pg
   pry-byebug
   rack
