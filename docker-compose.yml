@@ -19,15 +19,3 @@ services:
     ports:
       - '15672:15672'
       - '5672:5672'
-
-  web:
-    build: .
-    ports:
-      - '3000:3000'
-    volumes:
-      - '.:/usr/src/app'
-    environment:
-      DB_USER: postgres
-      DB_PASSWORD: postgres
-      DB_HOST: db
-    command: bundle exec rackup -p 3000 --host 0.0.0.0
