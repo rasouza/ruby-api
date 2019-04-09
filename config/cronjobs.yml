@@ -9,3 +9,7 @@ api_job:
   class: "Cron::Api"
   args:
     - "http://localhost:5000"
+
+date_job:
+  cron: "* * * * *"
+  class: "Cron::Date"

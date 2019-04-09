@@ -4,8 +4,8 @@ module Cron
     JOB_NAME = 'api_job'
 
     def perform(url)
-      connection = Faraday.new(url: url)
-      response = connection.get 'posts'
+      api = Faraday.new(url: url)
+      response = api.get 'posts'
       payload = JSON.parse(response.body)
       p payload
     end

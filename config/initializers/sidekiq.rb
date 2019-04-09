@@ -10,7 +10,7 @@ Sidekiq.configure_server do |config|
   end
 
   config.server_middleware do |chain|
-    chain.add Recover
+    chain.add Cron::Middlewares::Recover
   end
 
   if File.exist?('config/cronjobs.yml') && Sidekiq.server?
