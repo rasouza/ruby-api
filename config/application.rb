@@ -8,7 +8,7 @@ Bundler.require :default, ENV['RACK_ENV']
 
 $meta_config = MetaConfig.new(
   app_root: './',
-  verbose: true
+  verbose: false
 )
 
 require_rel '../app'

@@ -1,6 +1,7 @@
 require File.expand_path('../config/environment', __FILE__)
 use Rack::ConditionalGet
 use Rack::ETag
+use Raven::Rack
 
 require 'sidekiq/web'
 require 'sidekiq/cron/web'

@@ -1,5 +1,5 @@
-source 'https://maven.internal.sumup.com/content/repositories/gems/'
-# source 'https://rubygems.org'
+# source 'https://maven.internal.sumup.com/content/repositories/gems/'
+source 'https://rubygems.org'
 
 
 ruby '2.6.2'
@@ -8,6 +8,7 @@ gem 'rack'
 gem 'grape'
 gem 'grape-entity'
 gem 'pg'
+gem "sentry-raven", '~> 2.9.0', require: 'raven'
 gem 'semantic_logger', '~> 4.5'
 gem 'sneakers', '~> 2.11'
 gem 'sneakers_handlers', '~> 0.0.6'
