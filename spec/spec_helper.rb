@@ -1,7 +1,9 @@
 ENV['RACK_ENV'] = 'test'
 
 require 'simplecov'
+require 'codecov'
 SimpleCov.start
+SimpleCov.formatter = SimpleCov::Formatter::Codecov
 require File.expand_path('../../config/environment', __FILE__)
 require 'rspec'
 require 'shoulda-matchers'

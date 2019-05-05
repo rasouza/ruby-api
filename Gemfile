@@ -11,7 +11,6 @@ gem 'pg', '~> 1.1'
 gem "otr-activerecord", '~> 1.3.0'
 gem 'paper_trail', '~> 10.2.1'
 gem "sentry-raven", '~> 2.9.0', require: 'raven'
-gem 'semantic_logger', '~> 4.5'
 gem 'sneakers', '~> 2.11'
 gem 'sneakers_handlers', '~> 0.0.6'
 gem 'meta_config', '~> 1.6.1'
@@ -41,5 +40,6 @@ group :test do
   gem 'shoulda-matchers'
   gem 'database_cleaner'
   gem 'simplecov', require: false
+  gem 'codecov', :require => false
 end
 
