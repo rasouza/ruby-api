@@ -1,9 +1,8 @@
 require File.expand_path('../config/environment', __FILE__)
 use Rack::ConditionalGet
 use Rack::ETag
-
-require 'sidekiq/web'
-require 'sidekiq/cron/web'
+use OTR::ActiveRecord::ConnectionManagement
+use Raven::Rack
 
 run Rack::URLMap.new('/' => API::Base, '/sidekiq' => Sidekiq::Web)
 

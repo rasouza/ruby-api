@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require File.expand_path('../../config/environment', __FILE__)
+require 'sneakers/runner'
+
+workers = Worker.constants.map { |w| "Worker::#{w}".constantize }
+runner = Sneakers::Runner.new(workers)
+runner.run

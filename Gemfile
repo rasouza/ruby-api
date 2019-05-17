@@ -1,12 +1,21 @@
+# source 'https://maven.internal.sumup.com/content/repositories/gems/'
 source 'https://rubygems.org'
+
+
 ruby '2.6.2'
 
-gem 'rack'
-gem 'grape'
-gem 'grape-entity'
-gem 'grape-swagger'
-gem 'pg'
-gem 'activerecord', require: 'active_record'
+gem 'rack', '~> 2.0'
+gem 'grape', '~> 1.2'
+gem 'grape-entity', '~> 0.7'
+gem 'pg', '~> 1.1'
+gem "otr-activerecord", '~> 1.3.0'
+gem 'paper_trail', '~> 10.2.1'
+gem "sentry-raven", '~> 2.9.0', require: 'raven'
+gem 'sneakers', '~> 2.11'
+gem 'sneakers_handlers', '~> 0.0.6'
+gem 'meta_config', '~> 1.6.1'
+gem 'god', '~> 0.13.7'
+gem 'activerecord', '~> 5.2', require: 'active_record'
 gem 'require_all', '~> 1.3', '>= 1.3.3'
 gem 'sidekiq', '~> 5.2', '>= 5.2.5'
 gem 'sidekiq-cron', '~> 1.1'
@@ -19,6 +28,9 @@ end
 group :development do
   gem 'rake'
   gem 'thin'
+  gem 'guard', require: false
+  gem 'guard-rack', require: false
+  gem 'guard-bundler', require: false
 end
 
 group :test do
@@ -28,5 +40,6 @@ group :test do
   gem 'shoulda-matchers'
   gem 'database_cleaner'
   gem 'simplecov', require: false
+  gem 'codecov', :require => false
 end
 
