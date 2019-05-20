@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Bootstrap Grape application for REST APIs
+Bootstrap Grape application for REST APIs. Refer to [Wiki](https://github.com/rasouza/API_boilerplate/wiki) to know more about how features are implemented
 
 ## Features
 
