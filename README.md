@@ -2,7 +2,16 @@
 
 ## Introduction
 
-Bootstrap Grape application for REST APIS with ActiveRecord, RSpec and Swagger integration
+Bootstrap Grape application for REST APIs
+
+## Features
+
+- Live Reload Development ([Guard](https://github.com/guard/guard))
+- RabbitMQ ([Sneakers](http://sneakers.io/))
+- Cron Jobs ([Sidekiq](https://sidekiq.org/))
+- Audit Logs ([PaperTrail](https://github.com/paper-trail-gem/paper_trail))
+- [Codecov.io](https://codecov.io/)
+- [Sentry.io](https://sentry.io/)
 
 ## Dependencies
 
@@ -13,11 +22,6 @@ Bootstrap Grape application for REST APIS with ActiveRecord, RSpec and Swagger i
 ## Installation
 
 - Clone poject
-- Run the script:
-
- ```shell
- $ bin/setup
- ```
 
 - Run bundler:
 
@@ -36,6 +40,11 @@ Bootstrap Grape application for REST APIS with ActiveRecord, RSpec and Swagger i
  ```shell
  $ rackup -p 3000
  ```
+
+- For development:
+```shell
+$ bundle exec guard
+```
 
 ## Docker
 
@@ -61,6 +70,18 @@ To use console, run the following command:
 $ bin/console
 ```
 
+## Background Jobs
+
+To run Cron Jobs:
+```shell
+$ bin/sidekiq
+```
+
+To run RabbitMQ Workers:
+```shell
+$ bin/sneakers
+```
+
 ## Tests
 
 To execute tests, run the following command:
@@ -76,18 +97,6 @@ To show the application routes, run the following command:
 ```shell
 $ bundle exec rake routes
 ```
-
-## Swagger Documentation
-
-To access swagger documentation, enter the root application address in the browser:
-
-```shell
-http://localhost:3000
-```
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/Oliveirakun/grape-bootstrap.
 
 ## License
 
