@@ -1,5 +1,6 @@
-dest: file
-path: /dev/stdout
-level: DEBUG
-obfuscation: false
-log_sql: true
+development:
+  dest: file
+  path: /dev/stdout
+  level: DEBUG
+  obfuscation: false
+  log_sql: true

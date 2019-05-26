@@ -6,12 +6,11 @@ require 'bundler/setup'
 
 Bundler.require :default, ENV['RACK_ENV']
 
-$meta_config = MetaConfig.new(
-  app_root: './',
-  verbose: false
-)
+Global.configure do |config|
+  config.environment = ENV['RACK_ENV']
+  config.config_directory = File.dirname(__FILE__)
+end
 
 require_rel '../app'
 require_rel '../api'
-require_rel '../lib'
 require_rel 'initializers'

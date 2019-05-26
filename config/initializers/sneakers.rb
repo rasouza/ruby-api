@@ -1,7 +1,6 @@
 require 'sneakers/metrics/logging_metrics'
 
-rabbitmq_config = $meta_config.parse('rabbitmq.yml')
-amqp_conn = "amqp://#{rabbitmq_config['username']}:#{rabbitmq_config['password']}@#{rabbitmq_config['host']}:#{rabbitmq_config['port']}"
+amqp_conn = "amqp://#{Global.rabbitmq.username}:#{Global.rabbitmq.password}@#{Global.rabbitmq.host}:#{Global.rabbitmq.port}"
 
 Sneakers.configure  amqp: amqp_conn,
                     metrics: Sneakers::Metrics::LoggingMetrics.new,

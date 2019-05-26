@@ -1,8 +1,7 @@
 require 'sidekiq/web'
 require 'sidekiq/cron/web'
 
-redis_config = $meta_config.parse('redis.yml')
-redis_conn = "redis://#{redis_config['host']}:#{redis_config['port']}"
+redis_conn = "redis://#{Global.redis.host}:#{Global.redis.port}"
 Sidekiq.configure_server do |config|
   config.redis = { url: redis_conn }
 
