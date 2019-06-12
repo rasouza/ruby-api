@@ -2,7 +2,7 @@ module Resource
   class Conversion
 
     def hello
-      logger.info('teste')
+      { test: 'hello' }
     end
   end
 end
