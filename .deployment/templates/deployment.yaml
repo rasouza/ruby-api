@@ -2,6 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "API_boilerplate.fullname" . }}
+  annotations:
+    keel.sh/policy: force # <-- policy name according to https://semver.org/
+    keel.sh/trigger: poll # <-- actively query registry, otherwise defaults to webhooks
   labels:
 {{ include "API_boilerplate.labels" . | indent 4 }}
 spec:
