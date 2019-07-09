@@ -20,6 +20,7 @@ gem 'require_all', '~> 1.3', '>= 1.3.3'
 gem 'sidekiq', '~> 5.2', '>= 5.2.5'
 gem 'sidekiq-cron', '~> 1.1'
 gem 'faraday', '~> 0.15.4'
+gem 'rack-ecg', '~> 0.0.5'
 
 group :development, :test do
   gem 'pry-byebug'
