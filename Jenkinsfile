@@ -2,9 +2,13 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      agent any
+      agent {
+        docker {
+          image 'ruby:2.6.2'
+        }
+
+      }
       steps {
-        git 'https://github.com/rasouza/ruby-api'
         sh 'bundle install'
       }
     }
