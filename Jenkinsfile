@@ -1,7 +1,7 @@
-podTemplate(label: 'teste', containers: [
+podTemplate(label: 'ruby', containers: [
   containerTemplate(name: 'ruby', image: 'ruby:2.6.2', ttyEnabled: true, command: 'cat')
 ]) {
-  node('teste') {
+  node('ruby') {
     stage('Build') {
       container('ruby') {
         sh 'bundle install'
