@@ -16,6 +16,7 @@ fullnameOverride: ""
 service:
   type: NodePort
   port: 80
+  appPort: 3000
 
 ingress:
   enabled: false
