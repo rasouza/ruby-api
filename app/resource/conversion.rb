@@ -2,7 +2,7 @@ module Resource
   class Conversion
 
     def hello
-      { test: 'hello' }
+      { hello: 'world' }
     end
   end
 end
