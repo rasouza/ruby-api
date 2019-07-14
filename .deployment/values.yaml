@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: rasouza/api_boilerplate
+  repository: rasouza/ruby-api
   tag: ruby
   pullPolicy: Always
 
