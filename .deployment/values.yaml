@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: rasouza/ruby-api
-  tag: ruby
+  tag: latest
   pullPolicy: Always
 
 imagePullSecrets: []
