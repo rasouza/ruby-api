@@ -4,6 +4,7 @@ podTemplate(label: 'ruby', containers: [
   node('ruby') {
     stage('Build') {
       container('ruby') {
+        checkout scm
         sh 'bundle install'
       }
     }
