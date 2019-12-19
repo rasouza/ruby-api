@@ -118,7 +118,7 @@ GEM
       byebug (~> 11.0)
       pry (~> 0.10)
     raabro (1.1.6)
-    rack (2.0.6)
+    rack (2.0.8)
     rack-accept (0.4.5)
       rack (>= 0.4)
     rack-ecg (0.0.5)
