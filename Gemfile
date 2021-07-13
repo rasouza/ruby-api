@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 ruby '2.6.2'
 
-gem 'rack', '~> 2.0'
+gem 'rack', '~> 2.1'
 gem 'grape', '~> 1.2'
 gem 'grape-entity', '~> 0.7'
 gem 'pg', '~> 1.1'
